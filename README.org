@@ -1,0 +1,18 @@
+* ICSV
+an ICS Viewer
+
+** Description
+This is a simple ICS parser.
+I wrote it for personal usage in mutt.
+It extracts fields that (I think) are important, formats them, and
+outputs them in a more readable format.
+
+** Usage
+The program may accept input from:
+1) a file: =icsv $ics_file=
+2) stdin: =cat $ics_file | icsv -=
+
+** Compilation
+This program was developed in go (v1.26.5).
+It has no external dependencies.
+The program can be compiled with =go build=.
