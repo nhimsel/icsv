@@ -3,7 +3,7 @@ an ICS Viewer
 
 ** Description
 This is a simple ICS parser.
-I wrote it for personal usage in mutt.
+I wrote it for personal usage in [[http://www.mutt.org][mutt]].
 It extracts fields that (I think) are important, formats them, and
 outputs them in a more readable format.
 
@@ -13,6 +13,6 @@ The program may accept input from:
 2) stdin: =cat $ics_file | icsv -=
 
 ** Compilation
-This program was developed in go (v1.26.5).
+This program was developed in [[https://go.dev][go]] (v1.26.5).
 It has no external dependencies.
 The program can be compiled with =go build=.
