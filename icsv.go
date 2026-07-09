@@ -73,12 +73,16 @@ func removefilter(s string, f string) string {
 
 func tparse(t string) string {
 	// format yyyymmddThhmmss
-	if len(t) < 15 {
-		return "invalid date/time"
+	s := ""
+	if len(t) == 8 {
+		// date only
+		s = t[4:6] + "/" + t[6:8] + "/" + t[0:4]
 	} else if t[8] != 'T' {
-		return "invalid date/time"
+		s = "invalid date/time"
+	} else {
+		s = t[9:11] + ":" + t[11:13] + " " +
+			t[4:6] + "/" + t[6:8] + "/" + t[0:4]
 	}
-	s := t[9:11] + ":" + t[11:13] + " " + t[4:6] + "/" + t[6:8] + "/" + t[0:4]
 	return s
 }
 
